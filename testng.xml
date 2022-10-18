@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <suite-files>
+        <suite-file path="suiteFiles/staging.xml" />
+        <suite-file path="suiteFiles/asdp_vsl.xml"/>
+        <!-- <suite-file path="suiteFiles/aad.xml" /
+       <suite-file path="suiteFiles/utexas.xml" />
+        <suite-file path="suiteFiles/yaledermpath.xml" />
+        <suite-file path="suiteFiles/uchicago.xml" />
+        <suite-file path="suiteFiles/bu.xml" />
+        <suite-file path="suiteFiles/dermpathdiagnostics.xml" />
+        <suite-file path="suiteFiles/iac.xml" />
+        <suite-file path="suiteFiles/sagis.xml" />
+        <suite-file path="suiteFiles/nagasaki.xml" />
+        <suite-file path="suiteFiles/nlab.xml" />
+        <suite-file path="suiteFiles/dpa_dapa.xml" />
+        <suite-file path="suiteFiles/isdp.xml" />
+        <suite-file path="suiteFiles/mskcc.xml" />
+        <suite-file path="suiteFiles/kamc.xml" />-->
+    </suite-files>
+
+</suite>

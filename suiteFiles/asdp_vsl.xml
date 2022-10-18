@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ASDP_VSL Test suite" verbose="10">
+    <parameter name="url" value="https://asdp-vsl.pathpresenters.net"/>
+    <parameter name="username" value="tenantadmin@pathpresenter.net"/>
+    <parameter name="password" value="Password@4"/>
+    <test name="ASDP_VSL tenant Environment" preserve-order="true" >
+        <classes>
+            <class name="com.pp.tenants.TestScenarios.LoginValidationTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="STAGING Test Suite" >
+    <parameter name="url" value="https://staging-public.pathpresenter.net/login" />
+    <parameter name="username" value="kiran.thoodi@fissionlabs.com" />
+    <parameter name="password" value="Password#123" />
+    <test name="STAGING Environment " preserve-order="true" >
+        <classes>
+           <class name="com.pp.tenants.TestScenarios.LoginValidationTest" />
+       </classes>
+    </test>
+</suite>
