@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -24,14 +25,14 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
-public class TestBase{
+public class BaseClass {
     protected static WebDriver webDriver;
     protected static Properties prop;
     static String absPath = System.getProperty("user.dir");
     private static ExtentReports extentReports;
     public static ExtentTest extentTest;
 
-    public TestBase() {
+    public BaseClass() {
         try {
             prop = new Properties();
             System.out.println(absPath);
@@ -83,12 +84,12 @@ public class TestBase{
     }
 
     protected String titleValidation(String title) {
-        System.out.println(title);
+        //System.out.println(title);
         Boolean isTitleExists = false;
         String[] VALUES = {"Pathpresenter public", "ASDP-VSL"};
         for (int i = 0; i < VALUES.length; i++) {
             if (VALUES[i].equals(title)) {
-                System.out.println("nininni"+ title);
+               // System.out.println("nininni"+ title);
                 isTitleExists = true;
             }
         }
@@ -98,7 +99,7 @@ public class TestBase{
   @BeforeClass
     public static void startTest() {
       extentReports = new ExtentReports(absPath + "\\report\\report.html", false);
-      extentTest = extentReports.startTest("Extent report");
+      extentTest = extentReports.startTest("Education platform Report");
   }
 
       @BeforeTest
@@ -109,9 +110,14 @@ public class TestBase{
     @AfterTest
     public void tearDown(){
         webDriver.quit();
+       // extentReports.endTest(extentTest);
+        //extentReports.flush();
+    }
+
+    @AfterClass
+    public void tearreport(){
         extentReports.endTest(extentTest);
         extentReports.flush();
-
     }
 
 }

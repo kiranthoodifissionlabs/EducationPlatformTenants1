@@ -1,12 +1,15 @@
 package com.pp.tenants.PageObjects;
 
-import com.pp.tenants.Utility.TestBase;
+import com.pp.tenants.Utility.BaseClass;
 import com.relevantcodes.extentreports.LogStatus;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage extends TestBase {
+import java.util.List;
+
+public class HomePage extends BaseClass {
 
     public HomePage() {
         PageFactory.initElements(webDriver, this);
@@ -32,6 +35,12 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//span[text()='Create']")
     WebElement clickcreatebutton;
 
+    @FindBy(xpath = "//ul[@class=\"tree-children\"][@xpath=\"1\"]")
+    WebElement list;
+
+    @FindBy(xpath = "//div[@title=\"CKWUA90L\"]")
+    WebElement listValue;
+
     public void selectCreatebutton(){
         clickcreatebutton.click();
     }
@@ -48,9 +57,22 @@ public class HomePage extends TestBase {
         CreateFolder.click();
     }
     public void selectName() throws InterruptedException {
-        name.sendKeys(randomStringGenerator());
+        String zero = randomStringGenerator();
+        System.out.println("zero"+zero);
+        name.sendKeys(zero);
+       //name.sendKeys(randomStringGenerator());
         Thread.sleep(3000);
-        //System.out.println(randomStringGenerator());
+        List<WebElement> p =webDriver.findElements(By.xpath("//ul[@class=\"tree-children\"]/li[@class=\"tree-node tree-closed tree-leaf\"]"));
+        for(WebElement x: p){
+            System.out.println(x.getText());
+            /*if(zero=x.getText()){
+                webDriver.findElement(By.xpath())
+                1. We got the elements from the list
+                2. Compare both the elements same or not
+                3. if both are same then delete
+                4. else both are not same sout.
+             */
+            }
     }
     public void createFolder() throws InterruptedException {
         selectCreateFolder();

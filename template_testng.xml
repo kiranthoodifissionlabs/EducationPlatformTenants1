@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="Test">
         <classes>
-           <class name="com.pp.tenants.TestScenarios.LoginValidationTest"/>
+           <class name="com.pp.tenants.TestScenarios.LoginValidationandSlideBoxTest"/>
        </classes>
     </test>
 </suite>

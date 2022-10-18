@@ -1,11 +1,11 @@
 package com.pp.tenants.PageObjects;
 
-import com.pp.tenants.Utility.TestBase;
+import com.pp.tenants.Utility.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage extends TestBase {
+public class LandingPage extends BaseClass {
     public LandingPage() {
         PageFactory.initElements(webDriver, this);
     }

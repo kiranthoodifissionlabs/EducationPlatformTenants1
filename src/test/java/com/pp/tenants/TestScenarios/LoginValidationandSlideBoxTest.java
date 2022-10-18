@@ -2,7 +2,7 @@ package com.pp.tenants.TestScenarios;
 
 import com.pp.tenants.PageObjects.HomePage;
 import com.pp.tenants.PageObjects.LandingPage;
-import com.pp.tenants.Utility.TestBase;
+import com.pp.tenants.Utility.BaseClass;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.testng.annotations.Parameters;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class LoginValidationTest extends TestBase {
+public class LoginValidationandSlideBoxTest extends BaseClass {
     LandingPage landingPage;
     HomePage homePage;
 
@@ -20,7 +20,6 @@ public class LoginValidationTest extends TestBase {
         extentTest.log(LogStatus.INFO,"Verifyingtheloginfunctionality");
       landingPage = new LandingPage();
         landingPage.login(urlValue,usernameValue,passwordValue);
-        System.out.println(randomStringGenerator());
     }
 
     @Test(priority = 2)
@@ -62,8 +61,6 @@ public class LoginValidationTest extends TestBase {
         extentTest.log(LogStatus.INFO,"VerifytheLogoutFunctionality");
        // landingPage = new LandingPage();
         landingPage.SelectLogout();
-        System.out.println("Test");
-
     }
 
 }

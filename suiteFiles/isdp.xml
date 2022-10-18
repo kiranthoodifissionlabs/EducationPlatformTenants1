@@ -6,7 +6,7 @@
     <parameter name="password" value="Doru2345." />
     <test name="ISDP Tenant Environment " preserve-order="true" >
         <classes>
-           <class name="com.pp.tenants.TestScenarios.LoginValidationTest" />
+           <class name="com.pp.tenants.TestScenarios.LoginValidationandSlideBoxTest" />
        </classes>
     </test>
 </suite>

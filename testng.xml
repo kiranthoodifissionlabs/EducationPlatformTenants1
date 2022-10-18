@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <suite-files>
         <suite-file path="suiteFiles/staging.xml" />
-        <suite-file path="suiteFiles/asdp_vsl.xml"/>
+        <!--<suite-file path="suiteFiles/asdp_vsl.xml"/>-->
         <!-- <suite-file path="suiteFiles/aad.xml" /
        <suite-file path="suiteFiles/utexas.xml" />
         <suite-file path="suiteFiles/yaledermpath.xml" />
