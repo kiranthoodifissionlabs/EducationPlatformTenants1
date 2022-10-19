@@ -1,4 +1,6 @@
 package com.pp.tenants.TestScenarios;
 
-public class MyPresentationTest {
+import com.pp.tenants.Utility.BaseClass;
+
+public class MyPresentationTest extends BaseClass {
 }

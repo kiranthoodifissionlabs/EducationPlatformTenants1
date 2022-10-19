@@ -11,6 +11,8 @@ public class HighYieldPage extends BaseClass {
         PageFactory.initElements(webDriver, this);
     }
 
+
+
     @FindBy(xpath = "//div[text()=' High Yield Cases ']")
     WebElement highYield;
 
@@ -25,6 +27,41 @@ public class HighYieldPage extends BaseClass {
 
     @FindBy(xpath = "//input[@name=\"section name\"]")
     WebElement sectionName;
+
+    @FindBy(xpath = "//span[contains(text(),\"Create\")]")
+    WebElement createButton;
+
+    @FindBy(xpath = "(//button[@title=\"Delete High Yield Section\"])[1]")
+    WebElement deleteHighYieldSelection;
+
+
+    public void selecthighYieldCasesFromDashboard(){
+        highYield.click();
+    }
+    public void selectManageHighYieldSections(){
+        manageHighYieldSections.click();
+    }
+    public void clickOnCreateHighYieldSectionButton(){
+        createHighYieldSection.click();
+    }
+
+    public void sendSectionName() {
+        String sectionNameValue = randomStringGenerator();
+        sectionName.sendKeys(sectionNameValue);
+    }
+
+    public void clickOnCreateButton(){
+        createButton.click();
+    }
+
+
+    public void clickOnDeleteButton() {
+        deleteHighYieldSelection.click();
+    }
+
+
+
+
 
 
 
